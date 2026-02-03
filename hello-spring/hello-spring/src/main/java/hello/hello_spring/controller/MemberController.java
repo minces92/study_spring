@@ -1,8 +1,14 @@
 package hello.hello_spring.controller;
 
+import hello.hello_spring.domain.Member;
 import hello.hello_spring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @Controller
 public class MemberController {
@@ -30,5 +36,29 @@ public class MemberController {
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+    }
+
+    @GetMapping("/members/new")
+    public String createForm() {
+        return "members/createMemberForm";
+    }
+
+    @PostMapping("members/new")
+    public String create(MemberForm memberForm) {
+        // 우리가 만들었떤  도메인 맴버에 객체 선언
+        Member member = new Member();
+        // 도메인 맴버데 데이터를 입력 받은 값에서 추가
+        member.setName(memberForm.getName());
+        // 멤버 서비스를 통하여 join 진행
+        memberService.join(member);
+
+        return "redirect:/"; // 홈화면으로 이동
+    }
+
+    @GetMapping("/members")
+    public String List(Model model) {
+        List<Member> members = memberService.findMembers();
+        model.addAttribute("members", members);
+        return "members/memberList";
     }
 }
