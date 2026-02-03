@@ -3,14 +3,23 @@ package hello.hello_spring.service;
 import hello.hello_spring.domain.Member;
 import hello.hello_spring.repository.MemberRepository;
 import hello.hello_spring.repository.MemoryMemberRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
 
     // 먼저, 서비스를 위해서 회원용 리파짓토리가 필요하므로 가져옵시다.
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    //    private final MemberRepository memberRepository = new MemoryMemberRepository();
+
+    //
+    private final MemberRepository memberRepository;
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
 
     // 회원서비스 기능 1 : 회원 가입
     public Long join(Member member) {
