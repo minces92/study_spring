@@ -2,6 +2,9 @@
 <project version="4">
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="core" options="-parameters" />
+      <module name="core.main" options="-parameters" />
+      <module name="core.test" options="-parameters" />
       <module name="hello-spring" options="-parameters" />
       <module name="hello-spring.main" options="-parameters" />
       <module name="hello-spring.test" options="-parameters" />
