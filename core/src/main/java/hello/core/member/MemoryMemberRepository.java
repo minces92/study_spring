@@ -3,10 +3,10 @@ package hello.core.member;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MemoryMemberRepository implements MemberRepository{
+public class MemoryMemberRepository implements MemberRepository {
 
     // 저장소니까 map 이 필요합니다.
-    private  static Map<Long, Member> store= new HashMap<>();
+    private static Map<Long, Member> store = new HashMap<>();
 
 
     @Override

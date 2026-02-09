@@ -9,7 +9,7 @@ public class FixDiscountPolicy implements DiscountPolicy {
 
     @Override
     public int discount(Member member, int price) {
-        if(member.getGrade() == Grade.VIP){
+        if (member.getGrade() == Grade.VIP) {
             // Grade 의 값(eNum) == 으로 비교해도 되나요?
             // => Enum은 == 으로 비교가 맞음
             return discountFixAmount; // VIP 1000원 할인

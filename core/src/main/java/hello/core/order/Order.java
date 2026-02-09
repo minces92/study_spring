@@ -45,7 +45,7 @@ public class Order {
     private int itemPrice; // 제품 가격
     private int discountPrice; // 할인 가격
 
-    public int calculatePrice(){
+    public int calculatePrice() {
         return itemPrice - discountPrice;
     }
 
