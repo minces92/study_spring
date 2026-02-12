@@ -1,13 +1,15 @@
 package hello.core.member;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class MemoryMemberRepository implements MemberRepository {
 
     // 저장소니까 map 이 필요합니다.
     private static Map<Long, Member> store = new HashMap<>();
-
 
     @Override
     public void save(Member member) {
