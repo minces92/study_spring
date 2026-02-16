@@ -27,6 +27,12 @@ public class ConfigurationSingletonTest {
         System.out.println("MemoryMemberRepository =  " + MemoryMemberRepository);
 
         Assertions.assertThat(msMemberRepository).isSameAs(osMemberRepository);
+//      결과 다른 생성자가 만들어 집니다.
+        //        Expecting actual:
+//        hello.core.member.MemoryMemberRepository@6fd1660
+//        and:
+//        hello.core.member.MemoryMemberRepository@4a6c18ad
+//        to refer to the same object
 
     }
 

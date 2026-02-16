@@ -23,7 +23,8 @@ public class SingletonTest {
 //        System.out.println("memberService1 = " + memberService1);
 //        System.out.println("memberService2 = " + memberService2);
 
-        Assertions.assertThat(memberService1).isSameAs(memberService2);
+//        Assertions.assertThat(memberService1).isSameAs(memberService2);// appConfig가 스프링 컨테이너가 아니기 때문에 새로운 객체 생성됨
+        Assertions.assertThat(memberService1).isNotSameAs(memberService2);
     }
 
     @Test
