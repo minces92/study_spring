@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.server.servlet.context.ServletComponentScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.filter.CommonsRequestLoggingFilter;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @ServletComponentScan // 서블릿 자동 등록
 @SpringBootApplication
@@ -22,5 +24,8 @@ public class ServletApplication {
 //		filter.setMaxPayloadLength(10000);
 //		return filter;
 //	}
-
+		@Bean
+		public ViewResolver internalResourceViewResolver() {
+			return new InternalResourceViewResolver("/WEB-INF/views/", ".jsp");
+}
 }

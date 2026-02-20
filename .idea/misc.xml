@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/core" />
     <file type="web" url="file://$PROJECT_DIR$/hello-spring" />
+    <file type="web" url="file://$PROJECT_DIR$/servlet" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-25" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

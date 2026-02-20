@@ -8,7 +8,7 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.42/8365263844ebb62398e0dc33057ba10ba472d3b8/lombok-1.18.42.jar" />
         </processorPath>
-        <module name="servlet.main" />
+        <module name="hello.main" />
       </profile>
     </annotationProcessing>
   </component>
@@ -17,11 +17,14 @@
       <module name="core" options="-parameters" />
       <module name="core.main" options="-parameters" />
       <module name="core.test" options="-parameters" />
+      <module name="hello" options="-parameters" />
       <module name="hello-spring" options="-parameters" />
       <module name="hello-spring.main" options="-parameters" />
       <module name="hello-spring.test" options="-parameters" />
+      <module name="hello.main" options="-parameters" />
       <module name="hello.servlet.servlet.main" options="-parameters" />
       <module name="hello.servlet.servlet.test" options="-parameters" />
+      <module name="hello.test" options="-parameters" />
       <module name="servlet" options="-parameters" />
       <module name="servlet.main" options="-parameters" />
       <module name="servlet.test" options="-parameters" />
