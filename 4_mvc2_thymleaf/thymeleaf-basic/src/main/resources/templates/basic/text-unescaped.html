@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>text vs utext</h1>
+<ul>
+    <li>th:text 사용 <span th:text="${data}">기본값</span></li>
+<!--    unescaped 문법 th:utext-->
+    <li>th:utext 사용 <span th:utext="${data}">기본값</span></li>
+</ul>
+    <h1><span th:inline="none">[[...]] [(...)]</span></h1>
+<ul>
+    <li><span th:inline="none">[[...]] 안에 태그 escape : </span>[[${data}]]</li>
+    <li><span th:inline="none">[(...)] 안에 태그 가능  : </span>[(${data})]</li>
+</ul>
+
+</body>
+</html>

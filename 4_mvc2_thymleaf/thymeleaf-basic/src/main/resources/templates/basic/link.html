@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>URL 링크</h1>
+<ul>
+<!--    1번, http://localhost:8080/hello -->
+    <li><a th:href="@{/hello}">basic url</a></li>
+<!--    2번, http://localhost:8080/hello?param1=data1&param2=data2 -->
+    <li><a th:href="@{/hello(param1=${param1}, param2=${param2})}">hello query param</a></li>
+<!--    3번, http://localhost:8080/hello/data1/data2-->
+    <li><a th:href="@{/hello/{param1}/{param2}(param1=${param1}, param2=${param2})}">path variable</a></li>
+<!--    4번, http://localhost:8080/hello/data1?param2=data2
+        소괄호 안의 파라미터가 지정될 대상이 없는 경우 2번처럼 자동으로 쿼리파라미터가 됨-->
+    <li><a th:href="@{/hello/{param1}(param1=${param1}, param2=${param2})}">path variable + query parameter</a></li>
+</ul>
+</body>
+</html>
